@@ -1,0 +1,2 @@
+target/site/apidocs/* /usr/share/doc/liblogback-java/api
+docs/manual/ /usr/share/doc/liblogback-java/

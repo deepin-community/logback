@@ -1,0 +1,28 @@
+Description: Fixes the compatibility with the version of gmaven in Debian
+Author: Emmanuel Bourg <ebourg@apache.org>
+Forwarded: not-needed
+--- a/logback-classic/pom.xml
++++ b/logback-classic/pom.xml
+@@ -189,8 +189,8 @@
+             <goals>
+               <goal>generateStubs</goal>
+               <goal>compile</goal>
+-              <goal>testGenerateStubs</goal>
+-              <goal>testCompile</goal>
++              <goal>generateTestStubs</goal>
++              <goal>compileTests</goal>
+             </goals>
+           </execution>
+         </executions>
+@@ -345,9 +345,9 @@
+                     <artifactId>gmavenplus-plugin</artifactId>
+                     <versionRange>[1.5,)</versionRange>
+                     <goals>
+-                      <goal>testGenerateStubs</goal>
++                      <goal>generateTestStubs</goal>
+                       <goal>generateStubs</goal>
+-                      <goal>testCompile</goal>
++                      <goal>compileTests</goal>
+                       <goal>compile</goal>
+                     </goals>
+                   </pluginExecutionFilter>
